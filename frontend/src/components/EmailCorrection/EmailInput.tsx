@@ -1,13 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useRef} from 'react';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
-import dotenv from 'dotenv'; 
+import { Modal, Container } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./EmailInput.css"
 
 interface Message {
   message: string;
   sender: string;
 }
+
+function MyVerticallyCenteredModal(props: any) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Polish Complete!
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h4>Confidence Scoring: {props.score}</h4>
+          <p>
+            Polished Response: {props.response}
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
 
 function EmailInput() {
   const API_KEY = "";
@@ -18,6 +45,11 @@ function EmailInput() {
   const [loading, setLoading] = useState<boolean>(false);
   const [response, setResponse] = useState<string>("... awaiting response");
   const [score, setScore] = useState<string>("");
+
+  const [modalShow, setModalShow] = React.useState(false);
+
+  const [inputValue, setInputValue] = useState('');
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   const handleSend = async () => {
     const newMessage: Message = {
@@ -45,6 +77,7 @@ function EmailInput() {
       else {
         throw Error("invalid response")
       }
+      setModalShow(true)
     } catch (error) {
       console.error('Error processing message:', error);
       setError(true);
@@ -101,27 +134,31 @@ function EmailInput() {
     return content;
   };
 
-  return (
-    <div>
-      <br />
-      <h1>Email Corrector!</h1>
-      <Form.Control
-        type="text"
-        placeholder="Type your message..."
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <Button onClick={handleSend} disabled={loading}>
-        Send
+return (
+    <>
+      <Form>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Control
+            as="textarea"
+            placeholder="Enter your text here..."
+            rows={10}
+            cols={50}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className='custom-textarea'
+          />
+        </Form.Group>
+        <Button variant="primary" onClick={handleSend} className='button'>
+        Polish
       </Button>
-      <Card>
-        <Card.Body>
-          <Card.Text>
-            <h4>{loading ? 'Loading...' : "Score: " + score + ", Response: " + response}</h4>
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </div>
+      </Form>
+      <MyVerticallyCenteredModal
+        score={score}
+        response={response}
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+    </>
   );
 }
 
