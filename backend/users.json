@@ -1,0 +1,28 @@
+[
+    {
+        "name": "test",
+        "email": "test@test.com",
+        "scoreProgress": [
+            10,
+            30,
+            60
+        ],
+        "questionPostIds": [
+            32,
+            44
+        ]
+    },
+    {
+        "name": "test2",
+        "email": "test2@test.com",
+        "scoreProgress": [
+            12,
+            32,
+            62
+        ],
+        "questionPostIds": [
+            33,
+            43
+        ]
+    }
+]
