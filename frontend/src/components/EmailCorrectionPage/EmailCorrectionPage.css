@@ -1,0 +1,21 @@
+.full-body-container-email {
+  font-family: 'Poppins', sans-serif !important; 
+    margin: 0;
+    padding: 0;
+    background-image: url('../../assets/blankPage.png'); /* Replace with the actual path to your image */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif; /* Set a font for better readability */
+}
+
+.email-correct {
+  padding: 20px;
+    margin-top: 80px;
+    margin-left: 200px;
+    /*margin-right: 20px;
+    /*width: 300px; /* Adjust the width of the form container as needed */
+    text-align: center;
+}

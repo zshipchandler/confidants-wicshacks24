@@ -2,6 +2,9 @@ import React, { useState, useRef} from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Modal, Container } from 'react-bootstrap';
+import { BiClipboard } from 'react-icons/bi';
+import { BsClipboard2Check } from 'react-icons/bs';
+import CircleButton from '../CircleButton/CircleButton';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./EmailInput.css"
 
@@ -11,6 +14,7 @@ interface Message {
 }
 
 function MyVerticallyCenteredModal(props: any) {
+  const [currentClip, setClip] = useState(true);
     return (
       <Modal
         {...props}
@@ -28,16 +32,20 @@ function MyVerticallyCenteredModal(props: any) {
           <p>
             Polished Response: {props.response}
           </p>
+          <div className = "circleButton">
+            {currentClip && <CircleButton onClick = {() => setClip(false)} buttonType={BiClipboard}/>}
+            {!currentClip && <CircleButton buttonType={BsClipboard2Check}/>}
+          </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
+          <Button className = "button" onClick={props.onHide}>Close</Button>
         </Modal.Footer>
       </Modal>
     );
   }
 
 function EmailInput() {
-  const API_KEY = "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";
+  const API_KEY = "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";
 
   const [message, setMessage] = useState<Message>({ message: '', sender: '' });
   const [input, setInput] = useState<string>("");
