@@ -1,16 +1,19 @@
 .cardColor {
     border-color: black !important;
     border-width: 1px;
-    width: 700px;
+    width: 400px;
+    height: 150px;
 }
 
 .title {
     display: inline;
     justify-content: flex-start;
-    padding: 14px;
+   padding-left: 14px;
+   padding-top: 10px;
 }
 
 .buttonColor {
     background-color: #D90368 !important;
     border-color: #D90368 !important;
+    margin-top: -10px;
 }
