@@ -6,9 +6,6 @@ import SpotightTab from './components/Spotlight/SpotlightTab.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <nav className="navigation-bar">
-      <SpotightTab/>
-    </nav>
     <App />
   </React.StrictMode>,
 )
