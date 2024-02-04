@@ -1,0 +1,15 @@
+.elementContainer {
+    display: flex;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card-margin {
+    margin: 10px 0px 10px 0px;
+    max-height: 200px;
+}
+
+.postModal {
+   overflow-y: auto;
+}
