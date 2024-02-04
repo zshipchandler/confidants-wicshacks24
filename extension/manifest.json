@@ -1,27 +1,21 @@
 {
     "manifest_version": 3,
-    "name": "Confidants",
+    "name": "Confidant",
     "version": "0.1",
     "icons": {
-        "48": "loveletter.svg"
+        "128": "confidants.png"
      },
-    "description": "web extension for the Confidants app",
+    "description": "web extension for the Confidant app",
 
     "permissions": [
         "activeTab",
         "storage",
-        "tabs",
-        "scripting"
+        "tabs"
     ],
 
     "action": {
-        "default_title": "Confidants",
+        "default_title": "Confidant",
         "default_popup": "popup/popup.html"
-      },
+      }
 
-    "content_scripts": [{
-        "matches": ["*://*.youtube.com/*", "*://*.youtube-nocookie.com/*", "*://*.youtube-nocookie.com/*"],
-        "all_frames": true,
-        "js": ["popup/options.js"]
-    }]
 }

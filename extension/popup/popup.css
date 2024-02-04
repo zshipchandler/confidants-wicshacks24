@@ -32,13 +32,12 @@ textarea {
     border: 1px solid #2c0000;
     padding: 8px;
     font-size: 16px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     outline: none;
+    font-family: 'Gil Sans', 'Poppins', sans-serif;
     resize: vertical; /* Allows vertical resizing */
     min-height: 100px; /* Minimum height */
     width: 100%; /* Takes full width of its container */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    font-family: Arial, sans-serif; /* Choose your preferred font */
     transition: border-color 0.3s ease; /* Smooth transition for border color */
 }
 
