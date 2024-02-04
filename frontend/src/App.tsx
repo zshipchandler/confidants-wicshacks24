@@ -4,6 +4,7 @@ import EmailInput from './components/EmailCorrection/EmailInput';
 import Login from './components/Login/Login';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage/LandingPage'
+import UserPage from './components/User/UserPage'
 
 const handleLoginSuccess = () => {
   // Your logic for a successful login
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Login onLoginSuccess={handleLoginSuccess} />} />
         <Route path="/emailInput" element={<EmailInput />} />
         <Route path="/landing" element={<LandingPage />} />
+        <Route path="/user" element={<UserPage />} />
       </Routes>
      </Router>
       </div>
