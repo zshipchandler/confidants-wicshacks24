@@ -1,11 +1,26 @@
+import React, { useState } from 'react';
 import "./LandingPage.css"
+import NavLink from '../NavLink/NavLink';
+import CircleButton from '../CircleButton/CircleButton';
+import { BsPersonCircle } from 'react-icons/bs';
+import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
-const EmailCorrectionPage = () => {
+const LandingPage = () => {
+  const navigate = useNavigate();
   return (
     <div className="full-body-container-landing">
-       
+       <div className = "links">
+        <NavLink href = "/emailCorrection" title = "Email"/>
+        <NavLink href = "/forum" title = "Forum"/>
+        <CircleButton onClick= {() => navigate('/user')} buttonType={BsPersonCircle}/>
+      </div>
+      <div className = "buttonPairs-user">
+       <Button className = "button">Spotlight</Button>
+       <Button className = "button">Contact</Button>
+      </div>
     </div>
   );
 };
 
-export default EmailCorrectionPage;
+export default LandingPage;
