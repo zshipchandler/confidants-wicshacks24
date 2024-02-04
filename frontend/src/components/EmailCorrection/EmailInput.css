@@ -7,16 +7,20 @@
     border-color: #ffff
   }
 
-.btn {
-    outline-color: #ffd4c4 !important;
-    background-color: #d93068 !important
+.button {
+    border-color: #ffd4c4 !important;
+    background-color: #d93068 !important;
 }
 
 .btn:hover {
-    background-color: #c51a53 !important
+    background-color: #c51a53 !important;
 }
 
 .form-control:focus {
     border-color: #ffff; /* Change this color to your desired border color */
     box-shadow: none; /* Remove the box shadow */
   }
+
+.circleButton {
+  float: right;
+}
