@@ -29,6 +29,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
   };
 
   return (
+    <div className = "login-container-full">
     <div className="login-container">
        <Form
         onSubmit={(e) => {
@@ -56,6 +57,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
           Submit
         </Button>
       </Form>
+    </div>
     </div>
   );
 };
