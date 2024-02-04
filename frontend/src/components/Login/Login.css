@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+h1 {
+    color: #ffd4c4
+}
+
+h5 {
+    color: #5b6271
+}
+
+
+
+/* Login.css */
+
+/* Login.css */
+
+body {
+    font-family: 'Poppins', sans-serif !important; 
+    margin: 0;
+    padding: 0;
+    background-image: url('../../assets/login_final.png'); /* Replace with the actual path to your image */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif; /* Set a font for better readability */
+  }
+  
+  .login-container {
+    padding: 20px;
+    margin-top: 150px;
+    margin-left: 200px;
+    /*margin-right: 20px;
+    /*width: 300px; /* Adjust the width of the form container as needed */
+    text-align: center;
+  }
+  
