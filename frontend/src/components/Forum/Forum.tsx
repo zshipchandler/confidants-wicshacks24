@@ -22,7 +22,7 @@ export default function Forum () {
         <CircleButton onClick= {() => navigate('/user')} buttonType={BsPersonCircle}/>
       </div>
         <Container className="containerSize">
-        <Row style={{ marginTop: '30px', marginLeft: '550px', marginBottom: '20px', float:"right"}}>
+        <Row style={{ marginTop: '30px', marginLeft: '610px', marginBottom: '20px', marginRight: "-10px", float:"left"}}>
         
         <CircleButton buttonType={BiPlus} onClick={()=>{setShow(true)}}/>
 

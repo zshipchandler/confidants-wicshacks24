@@ -32,19 +32,19 @@ function PostModal(props: PostModalType) {
       
         <Card className="card-margin" >
             <ListGroup.Item>
-            <Card.Title>User 1</Card.Title>
+            <Card.Title style={{padding: "10px"}}>User 1</Card.Title>
                 <Card.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Card.Body>
             </ListGroup.Item>
         </Card>
         <Card className="card-margin">
         <ListGroup.Item>
-            <Card.Title>User 2</Card.Title>
+            <Card.Title style={{padding: "10px"}}>User 2</Card.Title>
             <Card.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Card.Body>
             </ListGroup.Item>
         </Card>
         <Card className="card-margin">
         <ListGroup.Item>
-            <Card.Title>User 3</Card.Title>
+            <Card.Title style={{padding: "10px"}}>User 3</Card.Title>
             <Card.Body>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Card.Body>
             </ListGroup.Item>
         </Card>
