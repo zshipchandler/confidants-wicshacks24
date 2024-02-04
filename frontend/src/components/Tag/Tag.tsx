@@ -10,7 +10,8 @@ type TagType = {
 function Tag(props: TagType) {
     return <Badge pill style={{
         cursor: 'pointer',
-        border: `1px solid ${props.clicked ? 'black' : ''}`,
+        backgroundColor: props.bgColor,
+        color: `${props.typeName == 'Tech' || props.typeName == 'Business' || props.typeName == 'Questions' ? '#000000' : '#ffffff'}`
       }} bg = {props.bgColor} >
         {props.typeName}
     </Badge>

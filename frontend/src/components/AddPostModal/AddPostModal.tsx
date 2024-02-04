@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import Tag from "../Tag/Tag";
 import "./AddPostModal.css"
 import { Modal } from "react-bootstrap";
@@ -12,25 +12,13 @@ type AddPostModalType = {
 }
 function AddPostModal(props: AddPostModalType) {
 
-  const [selectedButtons, setSelectedButtons] = useState([]);
-
-  const handleButtonClick = (buttonId: number) => {
-    // Toggle the selected state of the button
-    // setSelectedButtons(() => {
-    //   if (selectedButtons.includes(buttonId)) {
-    //     return selectedButtons.filter((id) => id !== buttonId);
-    //   } else {
-    //     return [...selectedButtons, buttonId];
-    //   }
-    // });
-  };
 
   const buttons = [
-    { id: 1, label: 'Tech', bgColor: 'primary' },
-    { id: 2, label: 'Business', bgColor:'secondary'},
-    { id: 3, label: 'Questions', bgColor: 'success' },
-    { id: 4, label: 'Announcements', bgColor: 'danger' },
-    { id: 5, label: 'News', bgColor: 'info' },
+    { id: 1, label: 'Tech', bgColor: '#FFD3BA' },
+    { id: 2, label: 'Business', bgColor:'#ffd4ca'},
+    { id: 3, label: 'Questions', bgColor: '#F49FBC' },
+    { id: 4, label: 'Announcements', bgColor: '#EC6C99' },
+    { id: 5, label: 'News', bgColor: '#D90368' },
   ];
 
     return <Modal show = {props.show} onHide = {props.onHide}>
@@ -40,21 +28,22 @@ function AddPostModal(props: AddPostModalType) {
         <Modal.Body>
         <Form>
         <Form.Group className="mb-3" controlId="input-title">
-            <Form.Label>Title</Form.Label>
+            
             <Form.Control
+            placeholder = "Add Title Here"
             type="text"
             autoFocus
             />
         </Form.Group>
         <Form.Group className="mb-3" controlId="tags">
-            <Form.Label>Tags</Form.Label>
+            <Form.Label className="mb-3" >Select Tags</Form.Label>
             <div className="tags">
             {buttons.map((button) => (
                 <Tag
                 typeName={button.label}
                 bgColor={button.bgColor}
                 key={button.id}
-                onClick={() => handleButtonClick(button.id)}
+                onClick={() => {}}
                 />
                 
             ))}
@@ -65,15 +54,14 @@ function AddPostModal(props: AddPostModalType) {
             className="mb-3"
             controlId="body"
         >
-            <Form.Label>Body</Form.Label>
-            <Form.Control as="textarea" rows={3} />
+            <Form.Control as="textarea" placeholder = "Add Body Here" rows={3} />
         </Form.Group>
         </Form>
         </Modal.Body>
         
         <Modal.Footer>
-          <Button variant="primary" onClick={props.onHide}>
-            Save Changes
+          <Button variant="primary" className = "buttonColor" onClick={props.onHide}>
+            Make a Post!
           </Button>
         </Modal.Footer>
     </Modal>

@@ -1,5 +1,12 @@
 .rounded-circle {
-    width: 40px;
-    height: 40px;
+    width: fit-content;
+    height: fit-content + 20px;
     border-radius: 50%;
+}
+
+
+.rounded-circle:hover {
+    background-color: #ffd4ca !important;
+    border-color: #ffd4ca !important;
+
 }

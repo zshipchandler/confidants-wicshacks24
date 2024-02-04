@@ -8,8 +8,18 @@
 .card-margin {
     margin: 10px 0px 10px 0px;
     max-height: 200px;
+    color: #EC6C99 !important;
+    font-size: large;
 }
 
 .postModal {
    overflow-y: auto;
+   color:#D90368 !important;
+   font-size: larger;
 }
+
+.font-color-main{
+    color:#D90368 !important;
+    font-size: larger;
+}
+
