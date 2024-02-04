@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Confidants",
+    "version": "0.1",
+    "icons": {
+        "48": "loveletter.svg"
+     },
+    "description": "web extension for the Confidants app",
+
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs",
+        "scripting"
+    ],
+
+    "action": {
+        "default_title": "Confidants",
+        "default_popup": "popup/popup.html"
+      },
+
+    "content_scripts": [{
+        "matches": ["*://*.youtube.com/*", "*://*.youtube-nocookie.com/*", "*://*.youtube-nocookie.com/*"],
+        "all_frames": true,
+        "js": ["popup/options.js"]
+    }]
+}
