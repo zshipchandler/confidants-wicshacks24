@@ -37,7 +37,7 @@ function MyVerticallyCenteredModal(props: any) {
   }
 
 function EmailInput() {
-  const API_KEY = "";
+  const API_KEY = "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";
 
   const [message, setMessage] = useState<Message>({ message: '', sender: '' });
   const [input, setInput] = useState<string>("");

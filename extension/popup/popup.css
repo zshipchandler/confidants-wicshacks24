@@ -1,14 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 /* universal styles */
 * {
-    font-family: serif;
+    font-family: 'Poppins', sans-serif;
+    color: #EC6C99;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    line-height: 1;
+    padding-left: 1.1em;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+p {
+    font-size: medium;
 }
 
 body {
     width: 400px;
 }
 
-input[type='number']{
-    width: 60px;
+/* Reset default textarea styles */
+textarea {
+    appearance: none;
+    border: 1px solid #2c0000;
+    padding: 8px;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    outline: none;
+    resize: vertical; /* Allows vertical resizing */
+    min-height: 100px; /* Minimum height */
+    width: 100%; /* Takes full width of its container */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    font-family: Arial, sans-serif; /* Choose your preferred font */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
 }
 
+/* Hover effect */
+textarea:hover {
+    border-color: #999;
+}
 
+/* Focus effect */
+textarea:focus {
+    border-color: #421646; /* Change to your preferred focus color */
+}
