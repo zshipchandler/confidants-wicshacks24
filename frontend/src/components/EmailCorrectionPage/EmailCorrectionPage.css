@@ -19,3 +19,11 @@
     /*width: 300px; /* Adjust the width of the form container as needed */
     text-align: center;
 }
+
+.links{
+  display:flex;
+  justify-content: space-between;
+  gap: 120px;
+  margin-left: 550px;
+  margin-bottom: 420px;
+}

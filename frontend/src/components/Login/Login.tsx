@@ -21,7 +21,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
       onLoginSuccess();
 
       // Redirect to another page upon successful login
-      navigate('/emailInput'); // Adjust the route as needed
+      navigate('/emailCorrection'); // Adjust the route as needed
     } else {
       // Handle login failure (show error message, etc.)
       console.log('Login failed. Please check your credentials.');
@@ -53,7 +53,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button className = "button" variant="primary" type="submit">
           Submit
         </Button>
       </Form>
