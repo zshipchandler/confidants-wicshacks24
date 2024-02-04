@@ -21,7 +21,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
       onLoginSuccess();
 
       // Redirect to another page upon successful login
-      navigate('/emailCorrection'); // Adjust the route as needed
+      navigate('/landing'); // Adjust the route as needed
     } else {
       // Handle login failure (show error message, etc.)
       console.log('Login failed. Please check your credentials.');
@@ -40,7 +40,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control
             type="text"
-            placeholder="Enter email"
+            placeholder="Enter username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />

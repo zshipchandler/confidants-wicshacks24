@@ -60,7 +60,7 @@ function AddPostModal(props: AddPostModalType) {
         </Modal.Body>
         
         <Modal.Footer>
-          <Button variant="primary" className = "buttonColor" onClick={props.onHide}>
+          <Button variant="primary" className = "buttonColorSubmit" onClick={props.onHide}>
             Make a Post!
           </Button>
         </Modal.Footer>
